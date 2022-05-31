@@ -58,6 +58,6 @@ router.get('/termosIndice', function(req, res, next) {
       res.status(200).render('termosIndice', { lista: lista});  
     })
     .catch(function(erro){
-      res.status(501).jsonp({erro: erro});
+      res.status(503).jsonp({erro: erro});
     })
 });
