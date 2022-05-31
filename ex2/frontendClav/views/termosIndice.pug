@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1.w3-container.w3-teal Termos de Índice
+  if lista.length > 0
+      .w3-container 
+        table.w3-table-all
+          tr
+            th Termo
+            th Id da classe 
+            th Título da classe
+          each e in lista
+              tr(id=e.termo)
+                td=e.termo
+                td
+                  a(href="/classes/"+e.idClasse)=e.idClasse
+                td
+                  a(href="/classes/"+e.idClasse)=e.tituloClasse
+  else
+    .w3-container
+      p Não existem entradas...
+  footer.w3-container.w3-teal
+    address Gerado por clavapp
+    p
+      a(href="/") Voltar á página principal

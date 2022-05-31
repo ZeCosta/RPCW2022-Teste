@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1.w3-container.w3-teal Classes
+  if lista.length > 0
+      .w3-container 
+        table.w3-table-all
+          tr
+            th Código
+            th Título
+          each e in lista
+              tr 
+                td
+                  a(href="/classes/"+e.codigo)=e.codigo
+                td
+                  a(href="/classes/"+e.codigo)=e.titulo
+  else
+    .w3-container
+      p Não existem entradas...
+  footer.w3-container.w3-teal
+    address Gerado por clavapp
+    p
+      a(href="/") Voltar á página principal

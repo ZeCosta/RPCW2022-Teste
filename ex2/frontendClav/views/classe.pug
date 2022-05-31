@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  h1.w3-container.w3-teal #{classe.titulo}
+  table.w3-table
+    tr
+      td 
+        b Nível
+      td=classe.nivel
+    tr 
+      td 
+        b Título
+      td=classe.titulo
+    tr 
+      td 
+        b Descrição
+      td=classe.descricao
+    tr 
+      td 
+        b Status
+      td=classe.status
+    if classe.filhos.length > 0
+      .w3-container 
+      tr 
+        td 
+          b Filhos 
+        td
+          ul
+            each e in classe.filhos
+              li 
+                a(href="/classes/"+e.codigo) #{e.codigo} - #{e.titulo}
+    if classe.nivel == 3
+      tr 
+        td 
+          b Termos de Índice
+        td 
+          ul 
+            each e in classe.termosInd
+              li 
+                a(href="/termosIndice#"+e.termo) #{e.termo}
+  footer.w3-container.w3-teal
+    address Gerado por clavapp
+    if classe.nivel > 2
+      .w3-container 
+      p 
+        a(href="/classes/"+classe.pai.codigo) Voltar á página Anterior
+    p
+      a(href="/classes/") Voltar á página principal das classes
+    p
+      a(href="/") Voltar á página principal

@@ -1,0 +1,2 @@
+mongoimport -d MAPA2022 -c cidades cidades.json --jsonArray
+mongoimport -d MAPA2022 -c ligacoes ligacoes.json --jsonArray

@@ -1,0 +1,18 @@
+        Ex1
+O dataset foi dividido em duas coleções, as cidades e as ligações, tendo sido estas inseridas na base de dados Mongo
+Após inicializar o mongo (sudo mongod --dbpath MyDataFolder/), dei import dos ficheiros json que representam as coleções
+    mongoimport -d MAPA2022 -c cidades cidades.json --jsonArray
+    mongoimport -d MAPA2022 -c ligacoes ligacoes.json --jsonArray
+
+Para executar a aplicação basta localizar-se na pasta apimapa, instalar os pacotes requeridos no package.json e executar o comando npm start
+
+
+
+        Ex2
+Perguntas de aquecimento:
+    Resposta1: len=18, lista= ['750.10.001', '750.10.002', '750.10.300', '750.10.600', '750.10.601', '750.10.602', '750.20.001', '750.20.002', '750.20.003', '750.20.300', '750.20.301', '750.20.600', '750.20.601', '750.30.001', '750.30.300', '750.30.600', '750.30.601', '750.30.602']
+    Resposta2: len=647
+    Resposta3: len=7
+    Resposta4: len=24
+
+Para executar a aplicação é necessário estar na pasta frontendClav, instalar os pacotes requeridos no packagejson e executar npm start
